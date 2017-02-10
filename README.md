@@ -1,3 +1,26 @@
-Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. In efficient implementations it is not a stable sort, meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts of memory to perform the sorting.
+# Quick Sort
+> aka "partition-exchange sort"
 
-Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.
+> Quicksort is a divide and conquer algorithm. Quicksort first divides a large array into two smaller sub-arrays: the low elements and the high elements. Quicksort can then recursively sort the sub-arrays.
+
+Best Case Scenario - O(n log(n))
+
+Average Case Scenario - O(n log(n))
+
+Worst Case Scenario - O(n^2)
+
+## Psuedo code
+```
+function quickSort(list) {
+    pivot
+    left
+    right
+    if list.length = 0
+        return 
+    for i = 1 to length(list)
+        if list[i] < pivot
+        left.push(list[i])
+    else
+        right.push(list[i])
+  return quickSort(left).concat(pivot, quickSort(right))
+```
